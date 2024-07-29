@@ -46,6 +46,24 @@
 .search-input::placeholder{
     font-family: var(--font-family);
 }
+.input-container{
+    position: relative;
+}
+.input-container input[type="text"]{
+    width: 595px;
+    padding: 
+    8px, 16px, 8px, 16px;
+}
+.input-container button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.search-button {
+    border: none;
+    background-color: none;
+}
 .note-list{
     display: flex;
     flex-direction: column;
@@ -60,11 +78,10 @@
     
 }
 
+
 .note{
     display: flex;
     justify-content: space-between;
-    
-   
    
 }
 .todo-text{
