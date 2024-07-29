@@ -10,11 +10,11 @@
 
 //if input is not empty, push(add) it to the array
 
-//then clear the current list
-
 // loop through the array of items
 
 //inside the loop show the items
+
+//then clear the current list
 
 //create li tag
 

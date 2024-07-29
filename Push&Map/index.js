@@ -9,14 +9,14 @@ let tasksArray = [];
 // Add event listener to the button
 addBtn.addEventListener("click", () => {
     // Get the input from the user
-    let userInput = newTask.value.trim();
+    let userInput = newTask.value;
 
     if (userInput !== "") {
         // Check if the task already exists in the array
-        if (tasksArray.includes(userInput)) {
-            alert("Task already exists!");
-            return;
-        }
+        // if (tasksArray.includes(userInput)) {
+        //     alert("Task already exists!");
+        //     return;
+        // }
 
         // Add the input value to the array
         tasksArray.push(userInput);
