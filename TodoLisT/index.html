@@ -18,7 +18,7 @@
             <div class="todo-item">
             <div class="search">
                 <div class="input-container">
-                    <input class="search-input" type="text" placeholder="Search note..."/>
+                    <input class="search-input" id="search-input" type="text" placeholder="Search note..."/>
                     <button type="button" class="search-button">
                         <img src="./search.svg" />
                     </button>
@@ -42,51 +42,17 @@
             <img  src="./footprint.png"/>
         </div>
        
-        
+        <ul id="list"></ul>
       
      
-        <div class="note-list">
-            <div class="note">
-                <div class="note-text">
-                    <input type="checkbox" id="checkbox1" />
-                    <p>NOTE #1</p>
-                </div>
-               <div class="note-image">
-                <img src="./edit.svg"/>
-                <img src="trash.svg" />
-               </div>
-               
-            </div>
-            <div class="note">
-                <div class="note-text">
-                    <input type="checkbox" id="checkbox2" />
-                    <p>NOTE #2</p>
-                </div>
-               <div class="note-image">
-                <img src="./edit.svg"/>
-                <img src="trash.svg" />
-               </div>
-               
-            </div>
-            <div class="note">
-                <div class="note-text">
-                    <input type="checkbox" id="checkbox3" />
-                    <p>NOTE #3</p>
-                </div>
-               <div class="note-image">
-                <img src="./edit.svg"/>
-                <img src="trash.svg" />
-               </div>
-               
-            </div>
-        </div> 
+
     </div>
         <div class="addBtn">
-            <button  type="button" class="btn addbutton" data-toggle="modal" data-target="#exampleModal">
+            <button  type="button" class="btn addbutton"  data-toggle="modal" data-target="#exampleModal">
                 <img src="./addBtn.svg"/>
             </button>
         </div>
-            <!-- Modal -->
+            <!-- Add Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -95,14 +61,62 @@
          
         </div>
         <div class="modal-body">
-          <input class="modal-input" type="text" placeholder="Input your note..."/>
+          <input class="modal-input" id="note-input" type="text" placeholder="Input your note..."/>
         </div>
         <div class="modal-footer">
             <div>
                 <button type="button" class="btn cancel-btn " data-dismiss="modal">Cancel</button>
             </div>
          <div>
-            <button type="button" class="btn apply-btn ">Apply</button>
+            <button type="button" id="addbutton" class="btn apply-btn ">Apply</button>
+         </div>
+     
+        </div>
+      </div>
+    </div>
+  </div>
+                       <!-- Edit Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">NEW NOTE</h5>
+         
+        </div>
+        <div class="modal-body">
+          <input class="modal-input" id="edit-input" type="text" placeholder="Input your note..."/>
+        </div>
+        <div class="modal-footer">
+            <div>
+                <button type="button" class="btn cancel-btn " data-dismiss="modal">Cancel</button>
+            </div>
+         <div>
+            <button type="button" id="editbutton" class="btn apply-btn ">Update</button>
+         </div>
+     
+        </div>
+      </div>
+    </div>
+  </div>
+            
+
+             <!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">NEW NOTE</h5>
+         
+        </div>
+        <div class="modal-body">
+        <p class="text-center">Are you sure you want to delete this note?</p>
+        </div>
+        <div class="modal-footer">
+            <div>
+                <button type="button" class="btn cancel-btn " data-dismiss="modal">Cancel</button>
+            </div>
+         <div>
+            <button type="button" id="deleteBtn" class="btn apply-btn">Delete</button>
          </div>
      
         </div>
@@ -113,6 +127,7 @@
       
         
   
+<script src="./index.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
