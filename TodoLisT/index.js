@@ -22,7 +22,7 @@ addBtn.addEventListener("click", () => {
 
 searchInput.addEventListener("input", (e)=>{
     let searchValue = notes.filter(item=>{
-        return item.includes(searchInput.value);
+        return item.userInput.includes(searchInput.value);
     });
     notes = searchValue;
     displayNote();
